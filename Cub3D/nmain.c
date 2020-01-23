@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 15:19:03 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/01/23 16:26:49 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/01/23 18:43:47 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,17 @@ void	print_map(data_t *data)
 	mlx_put_image_to_window(data->mlx_ptr, data->mlx_win, data->img.ptr, 0, 0);
 }
 
+int             ft_close(int key)
+{
+	char	c;
+
+	c = key - 48;
+	write(1, "L", 1);
+	write(1, &key, 1);
+   // mlx_destroy_window(data->mlx_ptr, data->img.ptr);
+	return (0);
+}
+
 int		main(int argc, char *argv[])
 {
 	data_t	data;
@@ -92,6 +103,8 @@ int		main(int argc, char *argv[])
 	print_map(&data);
 	mlx_hook(data.mlx_win, 2, (1L << 0), key_press_hook, &data);
 	mlx_hook(data.mlx_win, 3, (1L << 1), key_release_hook, &data);
+	mlx_hook(data.mlx_win, 8, (1L << 4), ft_close, &data);
+	//mlx_mouse_hook(data.mlx_ptr, deal_key, &data);
 	//mlx_put_image_to_window(data.mlx_ptr, data.mlx_win, data.img.ptr, 0, 0);
 	mlx_loop_hook(data.mlx_ptr, deal_key, &data);
 	mlx_loop(data.mlx_ptr);

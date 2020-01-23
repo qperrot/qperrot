@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 10:19:39 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/01/23 16:25:39 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/01/23 18:06:40 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,15 @@ int		deal_key(data_t *data)
 	double	movespeed;
 	double	security;
 	double	speed;
+	// int		mouse;
+	// int		x;
+	// int		y;
 
 	movespeed = 0.1;
 	security = 0.5;
 	speed = 0.1;
+	//mouse = mlx_mouse_get_pos(data->mlx_win, &x, &y);
+	//printf("x = %d et y = %d\n", x, y);
 	if (data->k[KEY_ESC] != 0)
 		ft_error_exit(data);
 	if (data->k[KEY_RIGHT] != 0 || data->k[KEY_LEFT] != 0 ||
