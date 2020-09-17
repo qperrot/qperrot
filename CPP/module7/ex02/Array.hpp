@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 15:33:31 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/17 14:05:32 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/17 15:02:13 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ template< typename T>
 Array<T>::IndexException::~IndexException() throw() {}
 
 template< typename T>
-Array<T>::IndexException& Array<T>::IndexException::operator=(Array<T>::IndexException const &rhs) throw() { (void)rhs; return (*this); }
+typename Array<T>::IndexException& Array<T>::IndexException::operator=(Array<T>::IndexException const &rhs) throw() { (void)rhs; return (*this); }
 
 template< typename T>
 const char* Array<T>::IndexException::what() const throw() { return ("Index out of range"); }
