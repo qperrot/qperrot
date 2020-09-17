@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 11:05:30 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/16 16:49:43 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/17 15:10:01 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,35 +34,6 @@ class Span
 		void			addNumber(unsigned int);
 		unsigned int	shortestSpan();
 		unsigned int	longestSpan();
-
-		class FullException : public std::exception
-		{
-			// private:
-			// 	IndexException() throw() {}
-			// 	IndexException(IndexException const &) throw() {}
-			// 	virtual ~IndexException() throw() {}
-			// 	IndexException & operator=(IndexException const &rhs) throw() {}
-			public:
-				// IndexException() throw() {}
-				// IndexException(IndexException const &) throw() {}
-				// virtual ~IndexException() throw() {}
-				// IndexException & operator=(IndexException const &rhs) throw() {}
-				virtual const char* what() const throw() { return ("Span is full");};
-		};
-		class SpanonerangeException : public std::exception
-		{
-			// private:
-			// 	IndexException() throw() {}
-			// 	IndexException(IndexException const &) throw() {}
-			// 	virtual ~IndexException() throw() {}
-			// 	IndexException & operator=(IndexException const &rhs) throw() {}
-			public:
-				// IndexException() throw() {}
-				// IndexException(IndexException const &) throw() {}
-				// virtual ~IndexException() throw() {}
-				// IndexException & operator=(IndexException const &rhs) throw() {}
-				virtual const char* what() const throw() { return ("The Size of Span is 1 or empty so we can not compare values");};
-		};
 };
 
 #endif

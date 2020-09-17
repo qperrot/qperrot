@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/16 11:05:07 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/16 16:06:01 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/17 15:11:20 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void			Span::addNumber(unsigned int num) {
 	if (this->_tab.size() <= this->_N)
 		this->_tab.insert(num);
 	else
-		throw Span::FullException();
+		throw std::length_error("Max size reached");
 }
 
 unsigned int	Span::shortestSpan() {
@@ -45,7 +45,7 @@ unsigned int	Span::shortestSpan() {
 
 	shortest = -1;
 	if (_tab.size() <= 1)
-		throw Span::SpanonerangeException();
+		throw std::length_error("Not enough elements");
 	std::multiset<int>::iterator it=_tab.begin();
 	while (it!=_tab.end())
 	{
@@ -68,6 +68,6 @@ unsigned int	Span::shortestSpan() {
 unsigned int	Span::longestSpan() {
 
 	if (_tab.size() <= 1)
-		throw Span::SpanonerangeException();
+		throw std::length_error("Not enough elements");
 	return (*(--_tab.end()) - *_tab.begin());
 }
