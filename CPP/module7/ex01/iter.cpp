@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 14:27:16 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/11 15:27:55 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/17 14:39:35 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void print(T const & n)
 }
 
 template< typename T>
-void iter(T *array, int len, void (*print)(T const & n))
+void iter(T *array, int len, void (*f)(T const & n))
 {
 	for (int i = 0; i < len; i++)
-		print(array[i]);
+		f(array[i]);
 }
 
 int	main(void)
