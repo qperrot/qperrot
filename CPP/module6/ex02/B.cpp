@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   B.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 16:50:35 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/17 13:47:13 by qperrot-         ###   ########.fr       */
+/*   Created: 2020/09/18 09:56:08 by qperrot-          #+#    #+#             */
+/*   Updated: 2020/09/18 09:56:26 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DATA_HPP
-#define DATA_HPP
+#include "B.hpp"
 
-#include <iostream>
-#include <sstream>
-#include <cstring>
+B::B() {}
 
-struct Data 
-{
-    std::string s1;
-    int n;
-    std::string s2;
-};
+B::B(B const &src) { (void)src; }
 
-void *	serialize(void);
-Data *	deserialize(void * raw);
-#endif
+B &B::operator=(B const &rhs) { (void)rhs; return (*this); }
 
-
+B::~B() {};

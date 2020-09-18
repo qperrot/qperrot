@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   A.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 16:50:35 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/17 13:47:13 by qperrot-         ###   ########.fr       */
+/*   Created: 2020/09/18 09:52:34 by qperrot-          #+#    #+#             */
+/*   Updated: 2020/09/18 09:55:47 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DATA_HPP
-#define DATA_HPP
+#include "A.hpp"
 
-#include <iostream>
-#include <sstream>
-#include <cstring>
+A::A() {}
 
-struct Data 
-{
-    std::string s1;
-    int n;
-    std::string s2;
-};
+A::A(A const &src) { (void)src; }
 
-void *	serialize(void);
-Data *	deserialize(void * raw);
-#endif
+A &A::operator=(A const &rhs) { (void)rhs; return (*this); }
 
-
+A::~A() {};

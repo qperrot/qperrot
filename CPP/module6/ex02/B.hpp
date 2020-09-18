@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 16:50:35 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/17 13:47:13 by qperrot-         ###   ########.fr       */
+/*   Created: 2020/09/18 09:48:11 by qperrot-          #+#    #+#             */
+/*   Updated: 2020/09/18 09:53:20 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef DATA_HPP
-#define DATA_HPP
+# ifndef B_HPP
+#define B_HPP
 
-#include <iostream>
-#include <sstream>
-#include <cstring>
+#include "Base.hpp"
 
-struct Data 
-{
-    std::string s1;
-    int n;
-    std::string s2;
+class B : public Base {
+	public:
+		B();
+		B(B const &src);
+		B &operator=(B const &rhs);
+		virtual ~B();
 };
 
-void *	serialize(void);
-Data *	deserialize(void * raw);
 #endif
-
-

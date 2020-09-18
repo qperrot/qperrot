@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 14:25:11 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/14 11:00:49 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/17 14:38:30 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <cstring>
 #include <stdlib.h> 
 #include <float.h>
+#include <limits>
 
 class Convert
 {

@@ -6,7 +6,7 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 09:26:44 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/14 11:00:58 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/18 09:57:05 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,6 @@ class Base
 {
 	public:
 		virtual ~Base() {};
-};
-
-class A : public Base {
-	private:
-		virtual ~A() {};
-};
-
-class B : public Base {
-	private:
-		virtual ~B() {};
-};
-
-class C : public Base {
-	private:
-		virtual ~C() {};
 };
 
 Base * generate(void);
