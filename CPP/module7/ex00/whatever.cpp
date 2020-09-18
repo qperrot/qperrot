@@ -6,20 +6,20 @@
 /*   By: qperrot- <qperrot-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 13:39:02 by qperrot-          #+#    #+#             */
-/*   Updated: 2020/09/11 14:04:56 by qperrot-         ###   ########.fr       */
+/*   Updated: 2020/09/18 09:24:16 by qperrot-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
 template< typename T > 
-T const &	max(T const & x, T const & y)
+T &	max(T& x, T& y)
 {
 	return (x>y ? x : y);
 }
 
 template< typename T >
-T const &	min(T const & x, T const & y)
+T &	min(T & x, T & y)
 {
 	return (x<y ? x : y);
 }
@@ -27,9 +27,8 @@ T const &	min(T const & x, T const & y)
 template< typename T >
 void swap(T & x, T & y)
 {
-	T	tmp;
+	T	tmp = x;
 
-	tmp = x;
 	x = y;
 	y = tmp;
 }
