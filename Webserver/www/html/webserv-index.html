@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<html lang="fr">
+<title>Webserver</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1545987796-200677ee1011?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bmV0d29ya3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#index" class="w3-button w3-block w3-black">INDEX</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#comments" class="w3-button w3-block w3-black">COMMENTS</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">by vmaokham and qperrot</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-tag w3-wide" style="font-size:50px">Webserver FR</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">A 42 School Project</span>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE PROJECT</span></h5>
+    <p>Bienvenue. HyperText Transfer Protocol (HTTP) is one of the fundamentals of the internet. It is the mechanism that enables computers to talk to each other by defining the format in which messages are passed.<br> This project consisted in writing our own HTTP server. We followed the real HTTP/1.1 RFC specifications 7230-7235. This server can be tested with a real browser.</p><br>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"The primary function of a web server is to store, process and deliver web pages to clients."</i></p>
+      <p>Patrick, Killelea (2002). Web performance tuning (2nd ed.)</p>
+</div><br><br>
+
+<!-- Menu Container -->
+<div class="w3-container" id="index">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">INDEX</span></h5>
+     
+      <h5>Images</h5>
+      <p class="w3-text-grey"><a href="/images/logo_42.png">Logo 42</a></p>
+      <p class="w3-text-grey"><a href="/images/cluster.jpg">Cluster 42</a></p>
+      <p class="w3-text-grey"><a href="/images/Hall.jpg">Hall 42</a></p><br>
+      
+      <h5>Uploaded files</h5>
+      <p class="w3-text-grey"><a href="/upload">Upload index</a></p><br>
+    
+      <h5>Useful links</h5>
+      <p class="w3-text-grey"><a href="https://cdn.intra.42.fr/pdf/pdf/15782/en.subject.pdf" target="_blank">Subject_en</a></p>
+      <p class="w3-text-grey"><a href="https://en.wikipedia.org/wiki/Web_server" target="_blank">Wiki_page</a></p><br>
+    </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="comments" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">COMMENTS</span></h5>
+    <p>Feel free to leave a comment!</p>
+    <!-- <form action="/action_page.php" target="_blank"> -->
+    <form action="/comment.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First Name" required name="FirstName"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Last Name" required name="LastName"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Comment" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div><br>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>42 Paris</p>
+</footer>
+
+</body>
+</html>
